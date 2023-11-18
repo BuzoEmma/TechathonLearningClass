@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 4,
+      "name": "Olu",
+      "email": "time@gmil.com",
+      "phone": "090650915672"
+    },
+    {
+      "id": 5,
+      "name": "Delight",
+      "email": "techthon@gmil.com",
+      "phone": "090650915672"
+    },
+    {
+      "name": "Habibah was sleeping",
+      "email": "Habibah@gmail.com",
+      "phone": "34567890",
+      "id": 6
+    },
+    {
+      "name": "Habibah is awake",
+      "email": "nmems@gmail.com",
+      "phone": "34567890",
+      "id": 7
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+.navLink {
+  color: black;
+  font-size: 1rem;
+}
+
+a.navList.active {
+  color: blue;
+  text-decoration: underline;
+  font-size: 1.3rem;
+}
