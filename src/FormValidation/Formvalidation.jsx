@@ -17,6 +17,8 @@ const Formvalidation = () => {
 
   const handleEvents = (e) => {
     const { name, value, type, checked } = e.target;
+ // Clear the error for the current field
+  setErrorForm((prevErrors) => ({ ...prevErrors, [name]: "" }));
 
     const checkValue = type === "checkbox" ? checked : value;
 
