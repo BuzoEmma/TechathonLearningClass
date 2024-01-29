@@ -1,0 +1,56 @@
+import React, { createContext, useContext, useState } from "react";
+
+const UserListContext = createContext();
+
+const ReactContext = ({ children }) => {
+    
+  const [User, setUser] = useState({
+    name: "Buzo",
+    email: "emmabuzo@gmail.com",
+  });
+
+  const listOfUsers = { User, setUser };
+  return (
+    <UserListContext.Provider value={listOfUsers}>
+      {children}
+    </UserListContext.Provider>
+  );
+};
+
+export default ReactContext;
+
+export const useUsers = () => {
+  return useContext(UserListContext);
+};
+
+
+// New App
+
+import { useUsers } from "./context/ReactContext";
+
+const UserProfile = () => {
+  const { User } = useUsers();
+
+  return <div>My name is {User.name}</div>;
+};
+
+export default UserProfile;
+
+
+
+//// Children Appp
+
+
+import ReactContext from "./context/ReactContext";
+import UserProfile from "./UserProfile";
+
+const App = () => {
+  const CheckingHighComp = HocComp(HighComp1);
+  return (
+    <ReactContext>
+        <UserProfile/>
+    </ReactContext>
+  );
+};
+
+export default App;
